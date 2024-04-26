@@ -1,4 +1,3 @@
-import { ContextProvider } from "@/core/context";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -16,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ContextProvider>
-        <body className={inter.className}>{children}</body>
-      </ContextProvider>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

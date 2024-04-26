@@ -1,0 +1,12 @@
+.container{
+    width: 40%;
+    margin: auto;
+}
+
+.user{
+    padding: 10px;
+    background-color: #ffb6f4;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+}
