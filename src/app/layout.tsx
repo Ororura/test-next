@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { Header } from "@/ui/components/header/Header";
 import "./ResetStyles.css";
+import StoreProvider from "@/app/StoreProvider";
 
 const inter: NextFont = Inter({ subsets: ["latin"] });
 
@@ -17,10 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header>{children}</Header>
-      </body>
-    </html>
+    <StoreProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <Header>{children}</Header>
+        </body>
+      </html>
+    </StoreProvider>
   );
 }
