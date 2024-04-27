@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    background-color: #ff5263;
+}
+
+.linksContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 100px;
+}
+
+.linksContainer a, .linksContainer p{
+    text-decoration: none;
+    color: inherit;
+    margin: 10px;
+}
+

@@ -1,0 +1,40 @@
+.container {
+    margin-top: 40px;
+}
+
+.formContainer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ff5f6a;
+}
+
+.formTitle {
+    font-size: 24px;
+    text-align: center;
+    margin: 10px;
+}
+
+
+.formInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.formButton {
+    padding: 10px 20px;
+    background-color: #fab0b7;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formButton:hover {
+    background-color: #ffffff;
+}
