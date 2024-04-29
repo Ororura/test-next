@@ -1,5 +1,3 @@
-import { Provider } from "react-redux";
-
 export default function Home() {
   return (
     <main>
@@ -7,5 +5,5 @@ export default function Home() {
         <h1>Главная страница</h1>
       </div>
     </main>
-  );
+  )
 }

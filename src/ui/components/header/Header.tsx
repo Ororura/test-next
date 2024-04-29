@@ -9,13 +9,13 @@ interface Props {
 export const Header: FC<Props> = ({ children }) => {
   return (
     <>
-      <div className={styles.container}>
+      <header className={styles.container}>
         <div className={styles.linksContainer}>
           <p>Valorant boosting</p>
           <Link href="/">Главная страница</Link>
           <Link href="/create-user">Создать аккаунт</Link>
         </div>
-      </div>
+      </header>
       {children}
     </>
   );
