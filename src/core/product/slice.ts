@@ -1,5 +1,5 @@
-import { IInitialState, IProduct } from '@/app/lib/features/product/types'
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IInitialState, IProduct } from '@/core/product/types';
 
 const initialState: IInitialState = {
   product: {
@@ -18,16 +18,16 @@ const initialState: IInitialState = {
     category: 'Фрукты',
     quantity: 500
   }
-}
+};
 
 export const productSlice = createSlice({
   name: 'product',
   initialState,
   reducers: {
     setNewProduct(state, action: PayloadAction<IProduct>) {
-      state.product = action.payload
+      state.product = action.payload;
     }
   }
-})
+});
 
-export const { setNewProduct } = productSlice.actions
+export const { setNewProduct } = productSlice.actions;

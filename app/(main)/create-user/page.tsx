@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { CreateUser } from "@/ui/components/createUser/CreateUser";
-import styles from "./page.module.css";
+import { FC } from 'react';
+import { CreateUser } from '@/ui/components/createUser/CreateUser';
+import styles from './page.module.css';
 
 const CreateUserPage: FC = () => {
   return (

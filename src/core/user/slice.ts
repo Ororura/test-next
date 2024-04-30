@@ -1,7 +1,7 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { IUser } from '@/types/types'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IUser } from '@/types/types';
 
-const userList: IUser[] = []
+const userList: IUser[] = [];
 
 const user: IUser = {
   id: 1,
@@ -10,20 +10,20 @@ const user: IUser = {
   middleName: 'Yurievich',
   email: 'gladkikhegor01@gmail.com',
   password: 'asdajkwdh'
-}
+};
 
-userList.push(user)
+userList.push(user);
 
-const initialState: IUser[] = [...userList]
+const initialState: IUser[] = [...userList];
 
 export const userSlice = createSlice({
   name: 'userList',
   initialState,
   reducers: {
     addNewUser: (state, action: PayloadAction<IUser>) => {
-      state.push(action.payload)
+      state.push(action.payload);
     }
   }
-})
+});
 
-export const { addNewUser } = userSlice.actions
+export const { addNewUser } = userSlice.actions;

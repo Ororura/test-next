@@ -1,3 +1,3 @@
-import { RootState } from '@/app/providers/store'
+import { RootState } from '@/app/providers/store';
 
-export const selectUserList = (state: RootState) => state.User
+export const selectUserList = (state: RootState) => state.User;

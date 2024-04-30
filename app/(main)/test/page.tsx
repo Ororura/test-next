@@ -1,35 +1,23 @@
-'use client'
-import { FC, FormEvent, FormEventHandler, MouseEventHandler } from 'react'
-import { IUser } from '@/types/types'
-import { useDispatch, useSelector } from 'react-redux'
-import { selectUserList } from '@/core/user'
-import { IInitialState, IProduct, selectProduct, setNewProduct } from '@/core/product'
+'use client';
+import { FC, FormEvent } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { IInitialState, selectProduct, setNewProduct } from '@/core/product';
+import { useGetProductByIdQuery } from '@/core/product/api';
 
 const Test: FC = () => {
-  const product: IInitialState = useSelector(selectProduct)
-  const dispatch = useDispatch()
+  const product: IInitialState = useSelector(selectProduct);
+  const dispatch = useDispatch();
 
-  const newProduct: IProduct = {
-    category: 'Electronics',
-    deliveryDate: '2024-05-01',
-    description: 'A cutting-edge device with advanced features.',
-    expirationDate: '2025-12-31',
-    id: 12345,
-    inStock: true,
-    lastUpdated: '2024-04-29',
-    manufacturer: 'TechCo',
-    ownerId: 98765,
-    price: 499.99,
-    productName: 'Smartphone X',
-    productionDate: '2024-03-15',
-    quantity: 100,
-    weight: 0.3
-  }
+  const { data } = useGetProductByIdQuery(1);
 
   const changeProductHandler = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    dispatch(setNewProduct(newProduct))
-  }
+    event.preventDefault();
+
+    if (data) {
+      dispatch(setNewProduct(data));
+    }
+    console.log(product);
+  };
 
   return (
     <div>
@@ -37,7 +25,7 @@ const Test: FC = () => {
         <button type='submit'>Изменить продукт</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Test
+export default Test;
