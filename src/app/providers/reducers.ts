@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
-import { productSlice } from '@/core/product';
-import { userSlice } from '@/core/user';
-import { productApi } from '@/core/product/api';
+import { productApi, productSlice } from '@/entities';
+import { userSlice } from '@/entities/user';
 
 export const reducers = combineReducers({
   [productApi.reducerPath]: productApi.reducer,

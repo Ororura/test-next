@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import { CreateUser } from '@/ui/components/createUser/CreateUser';
 import styles from './page.module.css';
+import CreateUserWidget from '@/widgets/create-user-widget/ui/CreateUserWidget';
 
 const CreateUserPage: FC = () => {
   return (
     <div className={styles.container}>
-      <CreateUser></CreateUser>
+      <CreateUserWidget></CreateUserWidget>
     </div>
   );
 };

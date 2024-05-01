@@ -1,20 +1,13 @@
 'use client';
 import { FC } from 'react';
-import { Product } from '@/ui/components/product';
-import { useGetProductByIdQuery } from '@/core/product/api';
+import ProductPage from '@/pages-layer/product-page/Product';
 
 interface PageParams {
   params: { id: number };
 }
 
-const ProductPage: FC<PageParams> = ({ params }) => {
-  const { data } = useGetProductByIdQuery(params.id);
-  return (
-    <div>
-      <p>Страница с продуктами</p>
-      {data && <Product product={data}></Product>}
-    </div>
-  );
+const Page: FC<PageParams> = ({ params }) => {
+  return <ProductPage productId={params.id}></ProductPage>;
 };
 
-export default ProductPage;
+export default Page;
