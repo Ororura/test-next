@@ -1,1 +1,1 @@
-export * from './CreateUserWidget';
+export { default as CreateUserWidget } from './CreateUserWidget';

@@ -1,2 +1,2 @@
-export * from './slice';
-export * from './selectors';
+export { productSlice, setNewProduct } from './slice';
+export { selectProduct } from './selectors';

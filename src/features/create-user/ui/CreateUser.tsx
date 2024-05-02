@@ -30,7 +30,7 @@ const CreateUser: FC = () => {
       <label htmlFor='password'>Пароль</label>
       <input className={styles.formInput} type='password' {...register('password')} placeholder='Введите пароль' />
       <button className={styles.formButton} type='submit'>
-        Зарегестрироваться
+        Зарегистрироваться
       </button>
     </form>
   );

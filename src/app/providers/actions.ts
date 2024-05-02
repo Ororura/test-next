@@ -1,5 +1,5 @@
-import { userSlice } from '@/core/user';
-import { productSlice } from '@/core/product';
+import { productSlice } from '@/entities';
+import { userSlice } from '@/entities/user';
 
 interface IActions {
   User: typeof userSlice.actions;

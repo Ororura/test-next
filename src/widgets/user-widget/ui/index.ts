@@ -1,1 +1,1 @@
-export * from './UserWidget';
+export { default as UserWidget } from './UserWidget';

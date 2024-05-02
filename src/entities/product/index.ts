@@ -1,4 +1,4 @@
 export * from './api';
 export * from './ui';
 export * from './model';
-export * from './types';
+export type { IInitialState, IProduct } from './types';
