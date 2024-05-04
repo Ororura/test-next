@@ -3,6 +3,7 @@ import { FC, useEffect, useState } from 'react';
 import { useGetChatQuery } from '../api';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { IChat, stompClient } from '..';
+import styles from './Chat.module.css';
 
 const Chat: FC = () => {
   const [textData, setTextData] = useState<IChat[]>([]);
@@ -30,10 +31,7 @@ const Chat: FC = () => {
   return (
     <div>
       {textData.map((el, idx) => (
-        <div
-          style={{ background: '#ff5263', padding: '15px', borderRadius: '15px', margin: '20px', width: '30%' }}
-          key={idx}
-        >
+        <div className={styles.chatContainer} key={idx}>
           <p>Имя: {el.name}</p>
           <p>Сообщение: {el.text}</p>
         </div>
