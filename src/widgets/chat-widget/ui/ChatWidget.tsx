@@ -1,9 +1,10 @@
 import { Chat } from '@/features/chat';
 import { FC } from 'react';
+import styles from './ChatWidget.module.css';
 
 const ChatWidget: FC = () => {
   return (
-    <div>
+    <div className={styles.chatWidgetContainer}>
       <Chat></Chat>
     </div>
   );

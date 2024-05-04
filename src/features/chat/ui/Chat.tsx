@@ -29,17 +29,19 @@ const Chat: FC = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       {textData.map((el, idx) => (
         <div className={styles.chatContainer} key={idx}>
-          <p>Имя: {el.name}</p>
-          <p>Сообщение: {el.text}</p>
+          <p className={styles.messageNick}>{el.name}</p>
+          <p className={styles.messageText}>{el.text}</p>
         </div>
       ))}
       <form onSubmit={handleSubmit(sendMessage)}>
-        <input placeholder='Введите ваше имя' type='text' {...register('name')} />
-        <input placeholder='Введите сообщение' type='text' {...register('text')} />
-        <button type='submit'>Отправить</button>
+        <input className={styles.input} placeholder='Введите ваше имя' type='text' {...register('name')} />
+        <input className={styles.input} placeholder='Введите сообщение' type='text' {...register('text')} />
+        <button className={styles.button} type='submit'>
+          Отправить
+        </button>
       </form>
     </div>
   );
