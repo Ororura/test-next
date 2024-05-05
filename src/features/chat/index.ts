@@ -1,3 +1,3 @@
 export * from './ui';
-export * from './utils';
+export * from './api';
 export type { IChat } from './types';

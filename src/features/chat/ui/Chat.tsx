@@ -1,8 +1,7 @@
 'use client';
 import { FC, useEffect, useState } from 'react';
-import { useGetChatQuery } from '../api';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { IChat, stompClient } from '..';
+import { IChat, stompClient, useGetChatQuery } from '..';
 import styles from './Chat.module.css';
 
 const Chat: FC = () => {
