@@ -32,7 +32,7 @@
 
 .button {
   padding: 10px 20px;
-  background-color: #4caf50;
+  background-color: #8d52db;
   border: none;
   color: white;
   text-align: center;
@@ -41,8 +41,10 @@
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
+  transition: 500ms;
 }
 
 .button:hover {
-  background-color: #45a049;
+  transition: 500ms;
+  background-color: #36067d;
 }
