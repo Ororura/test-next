@@ -12,6 +12,11 @@
   margin: 20px;
 }
 
+.nickAndTimeContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .messageNick {
   padding: 10px;
 }

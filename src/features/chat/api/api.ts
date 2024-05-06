@@ -6,7 +6,7 @@ export const chatApi = api.injectEndpoints({
   endpoints: (build) => ({
     getChat: build.query<IChat[], null>({
       query(): string | FetchArgs {
-        return 'chat';
+        return 'main-chat';
       }
     })
   })

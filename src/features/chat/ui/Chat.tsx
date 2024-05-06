@@ -3,6 +3,7 @@ import { FC, useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { IChat, stompClient, useGetChatQuery } from '..';
 import styles from './Chat.module.css';
+import { convertDate } from '../utils/ConvertDate';
 
 const Chat: FC = () => {
   const [textData, setTextData] = useState<IChat[]>([]);
@@ -31,7 +32,10 @@ const Chat: FC = () => {
     <div className={styles.container}>
       {textData.map((el, idx) => (
         <div className={styles.chatContainer} key={idx}>
-          <p className={styles.messageNick}>{el.name}</p>
+          <div className={styles.nickAndTimeContainer}>
+            <p className={styles.messageNick}>{el.name}</p>
+            <p className={styles.messageNick}>{convertDate(el.timestamp)}</p>
+          </div>
           <p className={styles.messageText}>{el.text}</p>
         </div>
       ))}
