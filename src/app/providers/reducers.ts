@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
-import { productApi, productSlice } from '@/entities';
+import { productSlice } from '@/entities';
 import { userSlice } from '@/entities';
-import { chatApi } from '@/features/chat/api';
+import { api } from '@/shared/api';
 
 export const reducers = combineReducers({
-  [productApi.reducerPath]: productApi.reducer,
-  [chatApi.reducerPath]: chatApi.reducer,
+  [api.reducerPath]: api.reducer,
   Product: productSlice.reducer,
   User: userSlice.reducer
 });
