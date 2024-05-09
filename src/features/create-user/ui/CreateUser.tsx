@@ -23,8 +23,6 @@ const CreateUser: FC = () => {
       <input className={styles.formInput} type='text' {...register('firstName')} placeholder='Введите имя' />
       <label htmlFor='lname'>Фамилия</label>
       <input className={styles.formInput} type='text' {...register('lastName')} placeholder='Введите фамилию' />
-      <label htmlFor='mname'>Отчество</label>
-      <input className={styles.formInput} type='text' {...register('middleName')} placeholder='Введите отчество' />
       <label htmlFor='email'>Почта</label>
       <input className={styles.formInput} type='email' {...register('email')} placeholder='Введите email' />
       <label htmlFor='password'>Пароль</label>

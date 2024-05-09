@@ -12,7 +12,6 @@ const User: FC<Props> = ({ data }) => {
         <>
           <p>Name: {data.firstName}</p>
           <p>Last Name: {data.lastName}</p>
-          <p>Middle Name: {data.middleName}</p>
           <p>Email: {data.email}</p>
           <p>Name: {data.firstName}</p>
         </>

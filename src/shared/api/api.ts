@@ -1,5 +1,5 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
-import query from '@/app/api/query';
+import { query } from '@/shared/api/query';
 
 export const api = createApi({
   reducerPath: 'api',

@@ -1,6 +1,6 @@
-import { api } from '@/app/api';
 import { IChat } from '..';
 import { FetchArgs } from '@reduxjs/toolkit/query';
+import { api } from '@/shared/api';
 
 export const chatApi = api.injectEndpoints({
   endpoints: (build) => ({

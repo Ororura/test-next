@@ -1,4 +1,3 @@
-import { api } from '@/app/api';
 import {
   BaseQueryFn,
   EndpointBuilder,
@@ -7,6 +6,7 @@ import {
   FetchBaseQueryMeta
 } from '@reduxjs/toolkit/query';
 import { IUser } from '@/shared';
+import { api } from '@/shared/api';
 
 export const userApi = api.injectEndpoints({
   endpoints: (

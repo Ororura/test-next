@@ -1,2 +1,2 @@
-export { default as query } from './query';
+export { query } from './query';
 export { api } from './api';
