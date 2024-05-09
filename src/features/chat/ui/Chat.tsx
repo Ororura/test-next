@@ -1,9 +1,10 @@
 'use client';
 import { FC, useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { IChat, stompClient, useGetChatQuery } from '..';
+import { IChat, useGetChatQuery } from '..';
 import styles from './Chat.module.css';
 import { convertDate } from '../utils/ConvertDate';
+import { stompClient } from '@/shared/api/websocket';
 
 const Chat: FC = () => {
   const [textData, setTextData] = useState<IChat[]>([]);
@@ -50,4 +51,4 @@ const Chat: FC = () => {
   );
 };
 
-export default Chat;
+export { Chat };

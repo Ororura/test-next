@@ -10,8 +10,7 @@ const convertDate: IConvertDate = (date) => {
   const month = dateObject.toLocaleString('ru-RU', { month: 'long' });
   const year = dateObject.getUTCFullYear();
 
-  const formattedTime = `${hours}:${minutes} ${day} ${month} ${year}`;
-  return formattedTime;
+  return `${hours}:${minutes} ${day} ${month} ${year}`;
 };
 
 export { convertDate };
